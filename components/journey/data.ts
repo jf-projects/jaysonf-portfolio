@@ -2,7 +2,7 @@ import { JourneyItem } from "./types";
 
 export const journey: JourneyItem[] = [
     {
-        id: "2025",
+        id: "2025-job",
         year: "2025",
         title: "Full Stack Web Developer",
         company: "Freelance",
@@ -37,7 +37,7 @@ export const journey: JourneyItem[] = [
     },
 
     {
-        id: "2020",
+        id: "2020-job",
         year: "2020",
         title: "Software Engineer",
         company: "Quickstrike Manufacturing Inc.",
@@ -69,11 +69,11 @@ export const journey: JourneyItem[] = [
     },
 
     {
-        id: "2017",
+        id: "2017-job",
         year: "2017",
         title: "IT Staff",
         company: "Republic Central Colleges",
-        duration: "2017 - 2019",
+        duration: "2017 - 2020",
         description:
             "Provided technical support and maintained computer systems and internal IT operations.",
 
@@ -92,7 +92,7 @@ export const journey: JourneyItem[] = [
     },
 
     {
-        id: "2016",
+        id: "2016-job",
         year: "2016",
         title: "Programmer",
         company: "Angeles City Government - ICTD",
@@ -119,11 +119,11 @@ export const journey: JourneyItem[] = [
     },
 
     {
-        id: "2015",
-        year: "2015",
+        id: "2017-college",
+        year: "2014",
         title: "Bachelor of Science in Information Technology",
         company: "Republic Central Colleges",
-        duration: "Graduated",
+        duration: "2014 - 2017 Graduated",
         description:
             "Completed a Bachelor's degree in Information Technology, building a strong foundation in software development, databases, and system design.",
 
