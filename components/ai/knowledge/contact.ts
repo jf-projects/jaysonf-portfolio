@@ -1,5 +1,5 @@
 const contact = {
-    email: "jayson@example.com",
+    email: "jfigprojects@gmail.com",
     phone: "+63 949 833 5414",
     location: "Angeles City, Pampanga, Philippines",
 
@@ -10,12 +10,12 @@ const contact = {
 
     linkedin: {
         label: "LinkedIn",
-        href: "https://www.linkedin.com/in/jayson-figueroa-165753294/",
+        href: "https://www.linkedin.com/in/jf-projects",
     },
 
     website: {
         label: "Portfolio",
-        href: "https://yourportfolio.com",
+        href: "https://jfigueroa.vercel.app/",
     },
 };
 
