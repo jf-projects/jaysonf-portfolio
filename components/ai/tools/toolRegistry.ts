@@ -5,7 +5,6 @@ import { searchSkills } from "@/components/ai/functions/searchSkills";
 import { searchServices } from "@/components/ai/functions/searchServices";
 import { searchContact } from "@/components/ai/functions/searchContact";
 
-
 const toolRegistry = {
     searchProjects,
     searchAbout,

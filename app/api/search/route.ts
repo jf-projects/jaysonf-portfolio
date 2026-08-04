@@ -47,6 +47,12 @@ export async function POST(req: NextRequest) {
              * Gemini has enough information.
              */
             if (functionCalls.length === 0) {
+
+                console.log("\n========== FINAL AI RESPONSE ==========\n");
+
+                console.log(response.text);
+
+                console.log("\n=======================================\n");
                 return NextResponse.json({
                     answer: response.text,
                     toolsUsed,
@@ -71,7 +77,7 @@ export async function POST(req: NextRequest) {
 
                 const tool =
                     toolRegistry[
-                        functionCall.name as keyof typeof toolRegistry
+                    functionCall.name as keyof typeof toolRegistry
                     ];
 
                 if (!tool) {
@@ -104,7 +110,8 @@ export async function POST(req: NextRequest) {
 
             console.log(
                 "Conversation:",
-                JSON.stringify(conversation, null, 2)
+                JSON.stringify(conversation, null, 2),
+                parts
             );
         }
     } catch (error) {

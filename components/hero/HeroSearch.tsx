@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Anton } from "next/font/google";
 
 import SearchInput from "./SearchInput";
@@ -68,23 +69,51 @@ export default function HeroSearch() {
             <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
 
                 {!showResult && (
-                    <div
-                        className="
-                            mb-8
-                            transition-all
-                            duration-500
-                            animate-in
-                            fade-in
-                        "
-                    >
-                        <Image
-                            src="/images/fox3.png"
-                            alt="Jayson Figueroa"
-                            width={90}
-                            height={90}
-                            priority
-                            className="mx-auto"
+                    <div className="relative flex items-center justify-center">
+
+                        {/* Breathing glow */}
+                        <motion.div
+                            className="
+                                absolute
+                                h-32
+                                w-32
+                                rounded-full
+                                bg-[#FF5A2F]
+                                blur-2xl
+                            "
+                            animate={{
+                                scale: [1, 1.2, 1],
+                                opacity: [0.35, 0.45, 0.15],
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
                         />
+
+                        {/* Logo */}
+                        <motion.div
+                            animate={{
+                                y: [0, -10, 0],
+                                scale: [1, 1.01, 1],
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
+                        >
+                            <Image
+                                src="/images/fxhead.png"
+                                alt="Jayson Figueroa"
+                                width={90}
+                                height={90}
+                                priority
+                                className="relative z-10 mx-auto"
+                            />
+                        </motion.div>
+
                     </div>
                 )}
 

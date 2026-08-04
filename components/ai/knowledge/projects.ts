@@ -4,11 +4,8 @@ import { Project } from "../types";
 const projects: Project[] = [
     {
         id: "prolook-customizer",
-
         name: "Prolook Customizer",
-
         role: "Backend Software Engineer",
-
         description:
             "A sports apparel customization platform that allows users to design uniforms with live previews and manage custom product orders.",
 
@@ -24,47 +21,44 @@ const projects: Project[] = [
         ],
 
         responsibilities: [
-            "Developed the uniform customization engine.",
-            "Implemented interactive product design features.",
-            "Built product management modules.",
-            "Optimized database queries and application performance.",
-            "Integrated order processing workflows.",
+            "Designed, developed, and maintained RESTful APIs consumed by the frontend application.",
+            "Integrated third-party APIs and external services to extend platform functionality.",
+            "Developed backend modules for product management, order processing, and business workflows.",
+            "Designed and optimized MySQL database schemas, queries, and application performance.",
+            "Implemented business logic, validation, and secure data processing within the Laravel application.",
+            "Collaborated with frontend developers to define API contracts and support new features.",
+            "Maintained and enhanced existing backend services while troubleshooting production issues.",
         ],
     },
-
-
     {
-        id: "perfect-game-customizer",
-
-        name: "Perfect Game Customizer",
-
+        id: "alli-sports-customizer",
+        name: "Alli Sports Customizer",
         role: "Backend Software Engineer",
 
         description:
-            "A web-based sports uniform customization platform that allows teams and athletes to design personalized apparel.",
+            "A custom apparel ordering platform with interactive product customization, built on a reusable backend architecture that supports multiple apparel brands.",
 
         technologies: [
             "Laravel",
             "PHP",
             "JavaScript",
             "MySQL",
-            "Bootstrap",
+            "jQuery",
         ],
 
         responsibilities: [
-            "Developed customization features.",
-            "Created backend modules and APIs.",
-            "Implemented business requirements.",
-            "Maintained and improved existing application features.",
+            "Designed, developed, and maintained RESTful APIs for frontend applications.",
+            "Integrated third-party APIs and external services.",
+            "Built reusable backend modules and shared business logic to support multiple apparel brands.",
+            "Developed a configurable architecture that significantly reduced development time when launching new brand websites.",
+            "Implemented business logic for product customization, ordering, and product management.",
+            "Optimized database queries and application performance.",
+            "Maintained production systems, resolved bugs, and implemented new features.",
         ],
     },
-
-
     {
         id: "alli-sports-customizer",
-
         name: "Alli Sports Customizer",
-
         role: "Backend Software Engineer",
 
         description:
@@ -79,48 +73,19 @@ const projects: Project[] = [
         ],
 
         responsibilities: [
-            "Developed frontend and backend features.",
-            "Created reusable components.",
-            "Implemented application improvements.",
-            "Maintained production systems.",
+            "Designed, developed, and maintained RESTful APIs for frontend applications.",
+            "Integrated third-party APIs and external services.",
+            "Built reusable backend modules and shared business logic to support multiple apparel brands.",
+            "Developed a configurable architecture that significantly reduced development time when launching new brand websites.",
+            "Implemented business logic for product customization, ordering, and product management.",
+            "Optimized database queries and application performance.",
+            "Maintained production systems, resolved bugs, and implemented new features.",
         ],
     },
-
-
-    {
-        id: "pg-uniforms",
-
-        name: "PG Uniforms",
-
-        role: "Backend Software Engineer",
-
-        description:
-            "A custom uniform ordering and management platform for sports apparel businesses.",
-
-        technologies: [
-            "Laravel",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "jQuery",
-        ],
-
-        responsibilities: [
-            "Built application features based on business requirements.",
-            "Developed backend functionality.",
-            "Implemented database-driven modules.",
-            "Fixed bugs and improved system reliability.",
-        ],
-    },
-
-
     {
         id: "personal-portfolio",
-
         name: "Personal Portfolio",
-
         role: "Full Stack Developer",
-
         description:
             "An AI-powered developer portfolio showcasing projects, skills, experience and services.",
 
@@ -141,17 +106,13 @@ const projects: Project[] = [
             "Implemented server-side API routes.",
         ],
     },
-
-
     {
         id: "real-estate-website",
-
-        name: "Real Estate Website",
-
-        role: "Frontend Developer",
+        name: "Real Estate Management System",
+        role: "Full Stack Software Engineer",
 
         description:
-            "A modern real estate website designed for property agents with property listings, contact features and responsive UI.",
+            "A real estate management system for property agents that streamlines property listings, customer management, payment tracking, reporting, and day-to-day operations through a modern web application.",
 
         technologies: [
             "Next.js",
@@ -159,35 +120,50 @@ const projects: Project[] = [
             "TypeScript",
             "Tailwind CSS",
             "DaisyUI",
+            "Supabase",
+            "PostgreSQL",
+            "Redis",
         ],
 
         responsibilities: [
-            "Designed responsive landing pages.",
-            "Built reusable UI components.",
-            "Implemented property sections and layouts.",
-            "Created modern navigation and hero sections.",
+            "Designed and developed responsive user interfaces using Next.js and React.",
+            "Built reusable UI components to ensure consistency and maintainability across the application.",
+            "Developed modules for customer management, property management, payment tracking, and reporting.",
+            "Integrated Supabase for authentication, database operations, and real-time data management.",
+            "Designed and implemented PostgreSQL database structures for properties, customers, transactions, and reports.",
+            "Optimized application performance through caching strategies using Redis.",
+            "Collaborated on system architecture and implemented new features based on business requirements.",
+            "Maintained and enhanced the application by resolving bugs, improving usability, and optimizing performance.",
         ],
     },
     {
-        id: 'Closed-By-Carla',
+        id: "closed-by-carla",
         name: "Closed By Carla",
-        role: "Fullstack Developer",
+        role: "Full Stack Developer",
+
         description:
-            "Luxury real estate platform built with Next.js featuring responsive design, AI assistant and premium user experience.",
+            "A luxury real estate platform built with Next.js that showcases property listings, integrates AI-powered assistance, and automatically gathers property data through web scraping to provide an enhanced user experience.",
 
         technologies: [
             "Next.js",
+            "React",
             "TypeScript",
-            "Tailwind",
+            "Tailwind CSS",
             "OpenAI",
+            "Node.js",
+            "Playwright",
         ],
+
         responsibilities: [
-            "Designed responsive landing pages.",
-            "Built reusable UI components.",
-            "Implemented property sections and layouts.",
-            "Created modern navigation and hero sections.",
+            "Designed and developed a responsive frontend using Next.js, React, and Tailwind CSS.",
+            "Built reusable UI components to maintain a consistent and scalable design system.",
+            "Implemented premium landing pages, property listings, and modern navigation.",
+            "Integrated an AI assistant to answer questions about properties and services.",
+            "Developed web scraping solutions using Playwright to collect property information from external real estate websites.",
+            "Processed and transformed scraped data for use within the application.",
+            "Maintained and enhanced application performance, responsiveness, and user experience.",
         ],
-    },
+    }
 ];
 
 

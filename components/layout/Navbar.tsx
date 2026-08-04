@@ -16,7 +16,7 @@ const navigation = [
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
-    { label: "Assistant", href: "#assistant" },
+    // { label: "Assistant", href: "#assistant" },
     { label: "Contact", href: "#contact" },
 ];
 
@@ -51,9 +51,13 @@ export default function Navbar() {
 
                 {/* Right Side */}
                 <div className="flex items-center gap-4">
-
-                    <Button
-                        className="
+                    <Link
+                        href="/file/Jayson-Figueroa-CV.pdf"
+                        target="_blank"
+                        download
+                    >
+                        <Button
+                            className="
                             hidden
                             rounded-full
                             bg-[#FFC247]
@@ -66,9 +70,12 @@ export default function Navbar() {
                             hover:bg-[#FFB000]
                             lg:flex
                         "
-                    >
-                        View Resume
-                    </Button>
+                        >
+
+                            Download Resume
+                        </Button>
+                    </Link>
+
 
                     {/* Mobile Menu Button */}
                     <Button
@@ -83,7 +90,6 @@ export default function Navbar() {
                             <Menu className="h-6 w-6" />
                         )}
                     </Button>
-
                 </div>
             </div>
 
@@ -126,9 +132,13 @@ export default function Navbar() {
                         ))}
 
                     </div>
-
-                    <Button
-                        className="
+                    <Link
+                        href="/file/Jayson-Figueroa-CV.pdf"
+                        target="_blank"
+                        download
+                    >
+                        <Button
+                            className="
                             mt-6
                             w-full
                             rounded-full
@@ -139,9 +149,11 @@ export default function Navbar() {
                             transition-all
                             hover:bg-[#FFB000]
                         "
-                    >
-                        View Resume
-                    </Button>
+                        >
+
+                            Download Resume
+                        </Button>
+                    </Link>
 
                 </nav>
             </div>

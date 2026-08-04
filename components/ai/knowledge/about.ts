@@ -3,7 +3,7 @@ const about = {
     title: "Full Stack Software Engineer",
     location: "Philippines",
     summary:
-        "Experienced Full Stack Software Engineer with expertise in Laravel, Next.js, React and Node.js.",
+        "Experienced Full Stack Software Engineer with experience in Laravel, Next.js, React and Node.js.",
     interests: [
         "Artificial Intelligence",
         "Real Estate Technology",

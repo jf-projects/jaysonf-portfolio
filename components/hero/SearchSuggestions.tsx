@@ -7,7 +7,6 @@ const suggestions = [
     "Show Laravel projects",
     "View work experience",
     "What technologies do you use?",
-    "Download your resume",
 ];
 
 export default function SearchSuggestions({

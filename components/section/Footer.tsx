@@ -5,8 +5,9 @@ import {
     Mail,
     ArrowUp,
 } from "lucide-react";
+import { motion } from 'framer-motion';
 
-import { FaGithub,FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -22,14 +23,53 @@ export default function Footer() {
             <div className="mx-auto max-w-4xl px-6 py-16 text-center">
 
                 {/* Owl */}
+                <div className="relative mx-auto flex h-32 w-32 items-center justify-center">
 
-                <Image
-                    src="/images/fox3.png"
-                    alt="JF Owl"
-                    width={70}
-                    height={70}
-                    className="mx-auto"
-                />
+                    {/* Breathing glow */}
+                    <motion.div
+                        className="
+                            absolute
+                            h-28
+                            w-28
+                            rounded-full
+                            bg-[#FF5A2F]
+                            blur-2xl
+                        "
+                        animate={{
+                            scale: [1, 1.2, 1],
+                            opacity: [0.2, 0.45, 0.2],
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        }}
+                    />
+
+                    {/* Logo */}
+                    <motion.div
+                        className="relative z-10"
+                        animate={{
+                            y: [0, -4, 0],
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        }}
+                    >
+                        <Image
+                            src="/images/fxhead.png"
+                            alt="Jayson Figueroa"
+                            width={70}
+                            height={70}
+                            priority
+                        />
+                    </motion.div>
+
+                </div>
+
+
 
                 {/* Heading */}
 
@@ -98,15 +138,15 @@ export default function Footer() {
 
                 <div className="mt-8 flex justify-center gap-6">
 
-                    <a href="#">
+                    <a href="https://github.com/jf-projects">
                         <FaGithub className="h-5 w-5 text-neutral-500 transition hover:text-[#FF5A2F]" />
                     </a>
 
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/jayson-figueroa-165753294/">
                         <FaLinkedin className="h-5 w-5 text-neutral-500 transition hover:text-[#FF5A2F]" />
                     </a>
 
-                    <a href="#">
+                    <a href="#contact">
                         <Mail className="h-5 w-5 text-neutral-500 transition hover:text-[#FF5A2F]" />
                     </a>
 

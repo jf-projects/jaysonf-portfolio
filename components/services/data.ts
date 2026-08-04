@@ -29,10 +29,10 @@ export const services: Service[] = [
             "AI assistants, document search, chatbots, and intelligent automation powered by OpenAI.",
 
         technologies: [
-            "OpenAI",
+            "GeminiAI",
             "Embeddings",
-            "RAG",
-            "Vector Search",
+            // "RAG",
+            // "Vector Search",
         ],
 
         projects: [
@@ -60,24 +60,24 @@ export const services: Service[] = [
         ],
     },
 
-    {
-        id: "automation",
-        title: "Automation",
-        description:
-            "Automate repetitive business tasks with workflows, webhooks, scheduled jobs, and integrations.",
+    // {
+    //     id: "automation",
+    //     title: "Automation",
+    //     description:
+    //         "Automate repetitive business tasks with workflows, webhooks, scheduled jobs, and integrations.",
 
-        technologies: [
-            "n8n",
-            "Cron",
-            "Email",
-            "Webhooks",
-        ],
+    //     technologies: [
+    //         "n8n",
+    //         "Cron",
+    //         "Email",
+    //         "Webhooks",
+    //     ],
 
-        projects: [
-            "Lead Automation",
-            "Email Automation",
-        ],
-    },
+    //     projects: [
+    //         "Lead Automation",
+    //         "Email Automation",
+    //     ],
+    // },
 
     {
         id: "dashboard",

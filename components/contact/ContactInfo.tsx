@@ -55,19 +55,19 @@ export default function ContactInfo() {
                     <InfoItem
                         icon={<Mail size={22} />}
                         title="Email"
-                        value="hello@jaysonfigueroa.dev"
+                        value="jfigprojects@gmail.com"
                     />
 
                     <InfoItem
                         icon={<FaGithub size={22} />}
                         title="GitHub"
-                        value="github.com/jaysonfigueroa"
+                        value="github.com/jf-projects"
                     />
 
                     <InfoItem
                         icon={<FaLinkedin size={22} />}
                         title="LinkedIn"
-                        value="linkedin.com/in/jaysonfigueroa"
+                        value="https://www.linkedin.com/in/jf-projects/"
                     />
 
                     <InfoItem

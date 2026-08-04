@@ -1,45 +1,30 @@
-"use client";
+import { InputHTMLAttributes, ReactNode } from "react";
 
-import { ReactNode } from "react";
-
-interface InputFieldProps {
+type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
     icon: ReactNode;
-    placeholder: string;
-    type?: string;
-    value?: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
+};
 
 export default function InputField({
     icon,
-    placeholder,
-    type = "text",
-    value,
-    onChange,
+    className = "",
+    ...props
 }: InputFieldProps) {
     return (
         <div className="relative">
-
-            {/* Icon */}
-
-            <div className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-neutral-400">
+            <div className="absolute left-5 top-1/2 -translate-y-1/2 text-neutral-400">
                 {icon}
             </div>
 
-            {/* Input */}
-
             <input
-                type={type}
-                value={value}
-                onChange={onChange}
-                placeholder={placeholder}
-                className="
+                {...props}
+                className={`
                     h-16
                     w-full
                     rounded-2xl
                     border
                     border-neutral-700
                     bg-[#1A1A1A]
+                    py-4
                     pl-14
                     pr-6
                     text-white
@@ -48,11 +33,9 @@ export default function InputField({
                     transition-all
                     duration-300
                     focus:border-[#FF5A2F]
-                    focus:ring-4
-                    focus:ring-[#FF5A2F]/20
-                "
+                    ${className}
+                `}
             />
-
         </div>
     );
 }

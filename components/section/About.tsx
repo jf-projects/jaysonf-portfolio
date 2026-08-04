@@ -1,167 +1,146 @@
 "use client";
 
-import { Check } from "lucide-react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
+import { Anton } from "next/font/google";
 
-const highlights = [
-    "Full Stack Development",
-    "AI Integration",
-    "REST API Development",
-    "Database Architecture",
-    "Laravel & Next.js",
-    "Cloud Deployment",
-];
+const anton = Anton({
+    subsets: ["latin"],
+    weight: "400",
+});
 
-const stats = [
-    {
-        value: "5+",
-        label: "Years Experience",
-    },
-    {
-        value: "20+",
-        label: "Projects Built",
-    },
-    {
-        value: "10+",
-        label: "Technologies",
-    },
-    {
-        value: "Remote",
-        label: "Ready",
-    },
+const lines = [
+    "$ whoami",
+    "Jayson Figueroa",
+    "",
+    "$ role",
+    "Full Stack Software Engineer",
+    "",
+    "$ stack",
+    "Laravel  •  Next.js  •  React  •  Node.js  •  AI Integration",
+    "TypeScript  •  MySQL  •  PostgreSQL  •  Supabase  •  Redis",
+    "",
+    "$ years_experience",
+    "7 Years in Software Development",
+    "",
+    "$ current_focus",
+    "Building scalable business applications",
+    "Developing AI-powered experiences",
+    "",
+    "$ available",
+    "✔ Open for Remote",
+    "✔ Open for Freelance",
+    "",
+    "$ _",
 ];
 
 export default function About() {
+    const [displayed, setDisplayed] = useState<string[]>([]);
+    const [lineIndex, setLineIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
+
+    const terminalRef = useRef<HTMLDivElement>(null);
+
+    const isInView = useInView(terminalRef, {
+        once: true,
+        amount: 0.5,
+    });
+
+    useEffect(() => {
+        if (!isInView) return;
+
+        if (lineIndex >= lines.length) return;
+
+        const current = lines[lineIndex];
+
+        const timer = setTimeout(() => {
+            if (charIndex < current.length) {
+                const next = [...displayed];
+
+                next[lineIndex] =
+                    current.substring(0, charIndex + 1);
+
+                setDisplayed(next);
+                setCharIndex(charIndex + 1);
+            } else {
+                setDisplayed((prev) => [...prev, ""]);
+                setLineIndex(lineIndex + 1);
+                setCharIndex(0);
+            }
+        }, current.startsWith("$") ? 25 : 12);
+
+        return () => clearTimeout(timer);
+    }, [isInView, charIndex, lineIndex, displayed]);
+
     return (
         <section
             id="about"
             className="bg-[#F8F5F0] py-32"
         >
-            <div className="mx-auto max-w-7xl px-8">
+            <div className="mx-auto max-w-6xl px-8">
 
-                <div className="grid items-center gap-20 lg:grid-cols-2">
+                <div className="mb-12 text-center">
+                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#FF5A2F]">
+                        ABOUT
+                    </p>
 
-                    {/* LEFT */}
-
-                    <motion.div
-                        initial={{ opacity: 0, x: -60 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{
-                            duration: 0.8,
-                            ease: "easeOut",
-                        }}
+                    <h2
+                        className={`${anton.className} mb-10 text-5xl md:text-6xl text-[#121212]`}
                     >
+                        Meet the Engineer
+                    </h2>
+                </div>
 
-                        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#FF5A2F]">
-                            ABOUT
-                        </p>
+                <div
+                    ref={terminalRef}
+                    className="overflow-hidden rounded-3xl border border-neutral-800 bg-[#111111] shadow-2xl"
+                >
+                    {/* Header */}
 
-                        <h2 className="text-6xl font-black leading-tight text-[#121212]">
-                            5+ Years of Building Software That Solves Real Problems.
-                        </h2>
+                    <div className="flex items-center justify-between border-b border-neutral-800 bg-[#1B1B1B] px-5 py-3">
 
-                        <p className="mt-8 text-xl leading-9 text-[#666]">
-                            I&apos;m a Full Stack Software Engineer specializing in
-                            Laravel, Next.js, AI integrations, and scalable
-                            business applications. I enjoy turning complex
-                            requirements into clean, maintainable products.
-                        </p>
-
-                        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-
-                            {highlights.map((item, index) => (
-
-                                <motion.div
-                                    key={item}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{
-                                        delay: index * 0.08,
-                                        duration: 0.4,
-                                    }}
-                                    className="flex items-center gap-3"
-                                >
-                                    <div className="rounded-full bg-[#FF5A2F]/10 p-2">
-                                        <Check
-                                            size={16}
-                                            className="text-[#FF5A2F]"
-                                        />
-                                    </div>
-
-                                    <span className="font-medium text-[#222]">
-                                        {item}
-                                    </span>
-
-                                </motion.div>
-
-                            ))}
-
+                        <div className="flex gap-2">
+                            <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
                         </div>
 
-                    </motion.div>
+                        <span className="font-mono text-xs text-neutral-500">
+                            jayson@portfolio
+                        </span>
 
-                    {/* RIGHT */}
+                        <div className="w-8" />
 
-                    <motion.div
-                        className="grid grid-cols-2 gap-6"
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true }}
-                        variants={{
-                            hidden: {},
-                            show: {
-                                transition: {
-                                    staggerChildren: 0.15,
-                                },
-                            },
-                        }}
-                    >
+                    </div>
 
-                        {stats.map((stat) => (
+                    {/* Terminal */}
 
-                            <motion.div
-                                key={stat.label}
-                                variants={{
-                                    hidden: {
-                                        opacity: 0,
-                                        y: 40,
-                                    },
-                                    show: {
-                                        opacity: 1,
-                                        y: 0,
-                                    },
-                                }}
-                                whileHover={{
-                                    y: -8,
-                                    scale: 1.03,
-                                }}
-                                transition={{
-                                    duration: 0.4,
-                                }}
-                                className="
-                                    rounded-[32px]
-                                    border
-                                    border-[#E7E3DD]
-                                    bg-white
-                                    p-10
-                                    shadow-sm
-                                "
+                    <div className="min-h-105 px-8 py-8 font-mono text-sm leading-7">
+
+                        {displayed.map((line, index) => (
+
+                            <div
+                                key={index}
+                                className={
+                                    line.startsWith("$")
+                                        ? "text-[#FF5A2F]"
+                                        : "text-neutral-300"
+                                }
                             >
-                                <h3 className="text-6xl font-black text-[#FF5A2F]">
-                                    {stat.value}
-                                </h3>
-
-                                <p className="mt-4 text-lg font-medium text-[#444]">
-                                    {stat.label}
-                                </p>
-
-                            </motion.div>
+                                {line}
+                            </div>
 
                         ))}
 
-                    </motion.div>
+                        {/* Blinking cursor while typing */}
+
+                        {isInView && lineIndex < lines.length && (
+                            <span className="animate-pulse text-[#FF5A2F]">
+                                █
+                            </span>
+                        )}
+
+                    </div>
 
                 </div>
 

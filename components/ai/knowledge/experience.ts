@@ -1,34 +1,34 @@
 const experience = [
     {
         company: "Freelance",
-
         position: "Full Stack Web Developer",
-
-        period: "2024 - Present",
-
+        period: "2025 - Present",
         location: "Remote",
-
         summary:
             "Building custom web applications for clients using modern frontend and backend technologies.",
 
         technologies: [
-            "Laravel",
-            "PHP",
             "React",
             "Next.js",
+            "Node.js",
             "TypeScript",
             "Tailwind CSS",
             "MySQL",
             "PostgreSQL",
             "Supabase",
             "REST API",
+            "Gemini AI",
+            "Prisma",
+            "Redis",
+            "Vercel",
+            "Render",
         ],
 
         responsibilities: [
             "Developed custom web applications using Laravel and Next.js.",
-            "Designed responsive user interfaces using React and Tailwind CSS.",
+            "Designed responsive user interfaces using Next.js and Tailwind CSS.",
             "Built RESTful APIs and integrated third-party services.",
-            "Managed databases using MySQL, PostgreSQL and Supabase.",
+            "Managed databases using PostgreSQL and Supabase.",
             "Collaborated directly with clients to deliver tailored software solutions.",
         ],
     },
@@ -36,16 +36,11 @@ const experience = [
 
     {
         company: "Quickstrike Manufacturing Inc.",
-
         position: "Software Engineer",
-
-        period: "2018 - 2024",
-
+        period: "2020 - 2024",
         location: "Philippines",
-
         summary:
             "Developed and maintained business applications including custom apparel customization platforms and internal systems.",
-
         technologies: [
             "Laravel",
             "PHP",
@@ -55,8 +50,9 @@ const experience = [
             "HTML",
             "CSS",
             "REST API",
+            "Bootstrap",
+            "Fabric.js",
         ],
-
         responsibilities: [
             "Developed and maintained custom web applications.",
             "Built product customization platforms using Laravel and JavaScript.",
@@ -66,19 +62,13 @@ const experience = [
             "Collaborated with designers and project managers.",
         ],
     },
-
-
     {
         company: "Angeles City Government - ICTD",
-
         position: "Programmer",
-
-        period: "2016 - 2018",
-
+        period: "2016 - 2017",
         location: "Angeles City",
-
         summary:
-            "Developed and maintained internal school management systems and database-driven applications.",
+            "Developed and maintained internal government management systems and database-driven applications.",
 
         technologies: [
             "PHP",
@@ -86,26 +76,22 @@ const experience = [
             "JavaScript",
             "HTML",
             "CSS",
+            "Bootstrap",
+            "Jquery"
         ],
 
         responsibilities: [
-            "Developed internal school management systems.",
+            "Developed internal government management systems.",
             "Maintained student information systems.",
             "Created reports and database queries.",
             "Provided technical support and system maintenance.",
         ],
     },
-
-
     {
         company: "REPUBLIC CENTRAL COLLEGES",
-
         position: "IT Staff",
-
-        period: "2015 - 2016",
-
+        period: "2017 - 2019",
         location: "Angeles City",
-
         summary:
             "Provided technical support and assisted with internal IT operations.",
 

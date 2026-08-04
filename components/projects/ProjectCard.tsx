@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -211,20 +212,25 @@ export default function ProjectCard({
                                         }}
                                         className="mt-10 flex gap-4"
                                     >
-                                        <button
+
+
+                                        <Link
+                                            key={project.id}
+                                            href={project.url}
+                                            target="_blank"
                                             className="
-                                                rounded-full
-                                                bg-[#FF5A2F]
-                                                px-6
-                                                py-3
-                                                text-sm
-                                                font-semibold
-                                                transition
-                                                hover:scale-105
-                                            "
+                                            rounded-full
+                                            bg-[#FF5A2F]
+                                            px-6
+                                            py-3
+                                            text-sm
+                                            font-semibold
+                                            transition
+                                            hover:scale-105
+                                        "
                                         >
                                             View Project
-                                        </button>
+                                        </Link>
 
                                         <button
                                             className="
