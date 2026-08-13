@@ -5,14 +5,15 @@ export const projects = [
         title: "Closed By Carla",
         description:
             "Luxury real estate platform built with Next.js featuring responsive design, AI assistant and premium user experience.",
-        image: "/images/cbc2.png",
+        image: "/images/cbc-new.png",
         tech: [
             "Next.js",
             "TypeScript",
             "Tailwind",
             "GeminiAI",
+            "Node.js"
         ],
-        url:"https://closedbycarla.vercel.app/"
+        url: "https://closedbycarla.vercel.app/"
     },
 
     {
@@ -23,14 +24,18 @@ export const projects = [
         description:
             "Interactive apparel customization platform using Laravel and Fabric.js with live previews.",
 
-        image: "/images/pl.png",
+        image: "/images/ps.png",
 
         tech: [
             "Laravel",
+            "Bootstap",
+            "Jquery",
+            "Redis",
+            "Javascript",
             "Fabric.js",
             "MySQL",
         ],
-        url:"https://customizer.prolook.com/"
+        url: "https://customizer.prolook.com/"
 
     },
 
@@ -41,16 +46,17 @@ export const projects = [
         title: "Real Estate Management System",
 
         description:
-            "Production and inventory management system used by manufacturing companies.",
+            "Real Estate management system used by Real Estate Company.",
 
-        image: "https://images.unsplash.com/photo-1617228679684-890412dc57a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
+        image: "/images/fd.png",
         tech: [
-            "Laravel",
-            "Bootstrap",
-            "MySQL",
+            "Next.js",
+            "Tailwind",
+            "Supabase",
+            "Postgres",
+            "TypeScript"
         ],
-        url:"https://closedbycarla.vercel.app/"
+        url: "https://ferraris-dashboard.vercel.app/"
 
     },
 
@@ -58,19 +64,17 @@ export const projects = [
         id: 4,
         short: "4",
 
-        title: "AI Portfolio Assistant",
+        title: "Video Editor Portfolio",
 
         description:
             "AI assistant capable of answering questions about projects, experience and skills.",
 
-        image: "https://images.unsplash.com/photo-1617228679684-890412dc57a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
+        image: "/images/pr.png",
         tech: [
             "Next.js",
-            "Node",
-            "OpenAI",
+            "Tailwind",
         ],
-        url:"https://closedbycarla.vercel.app/"
+        url: "https://phoenix-river.vercel.app/"
 
     },
 ];
